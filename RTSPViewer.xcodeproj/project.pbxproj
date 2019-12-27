@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C14F94423B5EFEA00A41B82 /* RTSPStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14F94323B5EFEA00A41B82 /* RTSPStreamViewController.swift */; };
 		84252F7723B56C9A0016D338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84252F7623B56C9A0016D338 /* AppDelegate.swift */; };
 		84252F7923B56C9A0016D338 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84252F7823B56C9A0016D338 /* SceneDelegate.swift */; };
 		84252F7E23B56C9A0016D338 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84252F7C23B56C9A0016D338 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C14F94323B5EFEA00A41B82 /* RTSPStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTSPStreamViewController.swift; sourceTree = "<group>"; };
 		84252F7323B56C990016D338 /* RTSPViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTSPViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84252F7623B56C9A0016D338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84252F7823B56C9A0016D338 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C14F94523B5EFF800A41B82 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C14F94323B5EFEA00A41B82 /* RTSPStreamViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		84252F6A23B56C990016D338 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 			children = (
 				84252F7623B56C9A0016D338 /* AppDelegate.swift */,
 				84252F7823B56C9A0016D338 /* SceneDelegate.swift */,
+				3C14F94523B5EFF800A41B82 /* Controllers */,
 				84252F7C23B56C9A0016D338 /* Main.storyboard */,
 				84252F7F23B56C9E0016D338 /* Assets.xcassets */,
 				84252F8123B56C9E0016D338 /* LaunchScreen.storyboard */,
@@ -136,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84252F7723B56C9A0016D338 /* AppDelegate.swift in Sources */,
+				3C14F94423B5EFEA00A41B82 /* RTSPStreamViewController.swift in Sources */,
 				84252F7923B56C9A0016D338 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
