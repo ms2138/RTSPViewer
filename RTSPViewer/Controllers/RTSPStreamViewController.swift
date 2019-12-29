@@ -12,6 +12,8 @@ private let reuseIdentifier = "RTSPStreamCell"
 
 class RTSPStreamViewController: UICollectionViewController {
 
+    private var videoStreams = [URL]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,12 +27,12 @@ extension RTSPStreamViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return videoStreams.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
