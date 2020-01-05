@@ -34,6 +34,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="rQY-Fc-vDm"/>
+                    <connections>
+                        <outlet property="urlCell" destination="od9-ih-Pm7" id="bfO-0o-lTo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zX-0a-nXv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
