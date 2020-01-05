@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C14F94423B5EFEA00A41B82 /* RTSPStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14F94323B5EFEA00A41B82 /* RTSPStreamViewController.swift */; };
+		3C18FC9623C1D44200E533F8 /* TextInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C18FC9523C1D44200E533F8 /* TextInputCell.swift */; };
 		3C786C7D23BDA7AB009B7351 /* AddStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C786C7C23BDA7AB009B7351 /* AddStreamViewController.swift */; };
 		3C786C7F23BDA842009B7351 /* AddStream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C786C7E23BDA842009B7351 /* AddStream.storyboard */; };
 		6BD5857F6652C392FBBB360B /* Pods_RTSPViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB07B83F8453FC533EAAB56 /* Pods_RTSPViewer.framework */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		3C14F94323B5EFEA00A41B82 /* RTSPStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTSPStreamViewController.swift; sourceTree = "<group>"; };
+		3C18FC9523C1D44200E533F8 /* TextInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputCell.swift; sourceTree = "<group>"; };
 		3C786C7C23BDA7AB009B7351 /* AddStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStreamViewController.swift; sourceTree = "<group>"; };
 		3C786C7E23BDA842009B7351 /* AddStream.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddStream.storyboard; sourceTree = "<group>"; };
 		84252F7323B56C990016D338 /* RTSPViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTSPViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +66,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		3C18FC9723C1D44A00E533F8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3C18FC9523C1D44200E533F8 /* TextInputCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		3C786C8023BDA849009B7351 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +106,7 @@
 			children = (
 				84252F7623B56C9A0016D338 /* AppDelegate.swift */,
 				84252F7823B56C9A0016D338 /* SceneDelegate.swift */,
+				3C18FC9723C1D44A00E533F8 /* Cells */,
 				3C14F94523B5EFF800A41B82 /* Controllers */,
 				3C786C8023BDA849009B7351 /* Storyboards */,
 				84252F7F23B56C9E0016D338 /* Assets.xcassets */,
@@ -214,6 +225,7 @@
 				3C786C7D23BDA7AB009B7351 /* AddStreamViewController.swift in Sources */,
 				84252F7723B56C9A0016D338 /* AppDelegate.swift in Sources */,
 				3C14F94423B5EFEA00A41B82 /* RTSPStreamViewController.swift in Sources */,
+				3C18FC9623C1D44200E533F8 /* TextInputCell.swift in Sources */,
 				84252F7923B56C9A0016D338 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
