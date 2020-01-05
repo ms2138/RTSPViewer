@@ -33,4 +33,17 @@ class TextInputCell: UITableViewCell {
 
         contentView.addSubview(textField)
     }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        let margins = self.layoutMarginsGuide
+
+        NSLayoutConstraint.activate([
+            textField.topAnchor.constraint(equalTo: contentView.topAnchor),
+            textField.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            textField.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
+            textField.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
+            ])
+    }
 }
