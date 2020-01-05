@@ -9,6 +9,16 @@
 import UIKit
 
 class TextInputCell: UITableViewCell {
+    var keyboardType: UIKeyboardType = .default {
+        didSet {
+            textField.keyboardType = keyboardType
+        }
+    }
+    var returnKeyType: UIReturnKeyType = .default {
+        didSet {
+            textField.returnKeyType = returnKeyType
+        }
+    }
     let textField: UITextField
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
