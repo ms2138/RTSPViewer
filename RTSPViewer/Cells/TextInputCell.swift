@@ -3,7 +3,7 @@
 //  RTSPViewer
 //
 //  Created by mani on 2020-01-05.
-//  Copyright © 2020 home. All rights reserved.
+//  Copyright © 2020 mani. All rights reserved.
 //
 
 import UIKit
