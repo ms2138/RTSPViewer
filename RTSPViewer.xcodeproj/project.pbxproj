@@ -12,6 +12,7 @@
 		3C786C7D23BDA7AB009B7351 /* AddStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C786C7C23BDA7AB009B7351 /* AddStreamViewController.swift */; };
 		3C786C7F23BDA842009B7351 /* AddStream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C786C7E23BDA842009B7351 /* AddStream.storyboard */; };
 		3C7C154223C29EE900F998E0 /* UITextField+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C154123C29EE900F998E0 /* UITextField+EXT.swift */; };
+		3C7C154523C2A30B00F998E0 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C154423C2A30B00F998E0 /* Validator.swift */; };
 		6BD5857F6652C392FBBB360B /* Pods_RTSPViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB07B83F8453FC533EAAB56 /* Pods_RTSPViewer.framework */; };
 		84252F7723B56C9A0016D338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84252F7623B56C9A0016D338 /* AppDelegate.swift */; };
 		84252F7923B56C9A0016D338 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84252F7823B56C9A0016D338 /* SceneDelegate.swift */; };
@@ -26,6 +27,7 @@
 		3C786C7C23BDA7AB009B7351 /* AddStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStreamViewController.swift; sourceTree = "<group>"; };
 		3C786C7E23BDA842009B7351 /* AddStream.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddStream.storyboard; sourceTree = "<group>"; };
 		3C7C154123C29EE900F998E0 /* UITextField+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+EXT.swift"; sourceTree = "<group>"; };
+		3C7C154423C2A30B00F998E0 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		84252F7323B56C990016D338 /* RTSPViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTSPViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84252F7623B56C9A0016D338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84252F7823B56C9A0016D338 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			children = (
 				84252F7623B56C9A0016D338 /* AppDelegate.swift */,
 				84252F7823B56C9A0016D338 /* SceneDelegate.swift */,
+				3C7C154423C2A30B00F998E0 /* Validator.swift */,
 				3C7C154323C29F2700F998E0 /* Extensions */,
 				3C18FC9723C1D44A00E533F8 /* Cells */,
 				3C14F94523B5EFF800A41B82 /* Controllers */,
@@ -237,6 +240,7 @@
 				3C7C154223C29EE900F998E0 /* UITextField+EXT.swift in Sources */,
 				84252F7723B56C9A0016D338 /* AppDelegate.swift in Sources */,
 				3C14F94423B5EFEA00A41B82 /* RTSPStreamViewController.swift in Sources */,
+				3C7C154523C2A30B00F998E0 /* Validator.swift in Sources */,
 				3C18FC9623C1D44200E533F8 /* TextInputCell.swift in Sources */,
 				84252F7923B56C9A0016D338 /* SceneDelegate.swift in Sources */,
 			);
