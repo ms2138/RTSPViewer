@@ -38,7 +38,6 @@ extension AddStreamViewController {
         textField.autocapitalizationType = .none
         textField.keyboardType = .URL
         textField.returnKeyType = .done
-        textField.isSecureTextEntry = true
     }
 }
 
