@@ -10,6 +10,7 @@ import UIKit
 
 class AddStreamViewController: UITableViewController {
     @IBOutlet weak var urlCell: TextInputCell!
+    var handler: ((URL) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
