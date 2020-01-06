@@ -20,3 +20,9 @@ extension UITextField {
         self.layer.add(shake, forKey: "position")
     }
 }
+
+extension UITextField: Validatable {
+    func validate(_ functions: [(String) -> Bool]) -> Bool {
+        return functions.map { $0(self.text ?? "") }.allSatisfy { $0 == true }
+    }
+}
