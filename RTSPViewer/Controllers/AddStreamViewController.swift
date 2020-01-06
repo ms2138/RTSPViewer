@@ -13,6 +13,8 @@ class AddStreamViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        title = "Add Stream"
     }
 
     // MARK: - Table view data source
