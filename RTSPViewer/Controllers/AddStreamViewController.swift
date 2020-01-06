@@ -41,11 +41,14 @@ extension AddStreamViewController {
     // MARK: - Setup
 
     private func setupTextInputCell() {
-        urlCell.textField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
-        urlCell.textField.autocapitalizationType = .none
-        urlCell.keyboardType = .URL
-        urlCell.textField.returnKeyType = .done
-        urlCell.textField.isSecureTextEntry = true
+        let textField = urlCell.textField
+
+        textField.delegate = self
+        textField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        textField.autocapitalizationType = .none
+        textField.keyboardType = .URL
+        textField.returnKeyType = .done
+        textField.isSecureTextEntry = true
     }
 }
 
@@ -88,5 +91,18 @@ extension AddStreamViewController {
                 handler?(url)
             }
         }
+    }
+}
+
+extension AddStreamViewController: UITextFieldDelegate {
+    // MARK: - Text field delegate
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.returnKeyType == .done {
+            textField.resignFirstResponder()
+            done()
+            return true
+        }
+        return false
     }
 }
