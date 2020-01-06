@@ -21,6 +21,8 @@ class AddStreamViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
+        setupTextInputCell()
+
         urlCell.textField.becomeFirstResponder()
     }
 
@@ -36,7 +38,19 @@ class AddStreamViewController: UITableViewController {
 }
 
 extension AddStreamViewController {
-    // MARK: - Text field validation
+    // MARK: - Setup
+
+    private func setupTextInputCell() {
+        urlCell.textField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        urlCell.textField.autocapitalizationType = .none
+        urlCell.keyboardType = .URL
+        urlCell.textField.returnKeyType = .done
+        urlCell.textField.isSecureTextEntry = true
+    }
+}
+
+extension AddStreamViewController {
+    // MARK: - Text field validation and changes
 
     func handleTextfieldValidation(in textField: UITextField, message: String) {
         textField.text = ""
@@ -49,8 +63,13 @@ extension AddStreamViewController {
 
         textField.becomeFirstResponder()
     }
-}
 
+    @objc func textDidChange(sender: UITextField) {
+        if sender.textColor != .black {
+            sender.textColor = .black
+        }
+    }
+}
 
 extension AddStreamViewController {
     // MARK: - IBAction
