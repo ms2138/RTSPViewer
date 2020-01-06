@@ -18,6 +18,12 @@ class AddStreamViewController: UITableViewController {
         title = "Add Stream"
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        urlCell.textField.becomeFirstResponder()
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -65,4 +71,3 @@ extension AddStreamViewController {
         }
     }
 }
-
