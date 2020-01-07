@@ -19,7 +19,20 @@ class RTSPStreamViewController: UICollectionViewController {
 
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+    }
+}
 
+extension RTSPStreamViewController {
+    func add(stream: URL) {
+        videoStreams.append(stream)
+
+        videoStreams.sort { $0.absoluteString < $1.absoluteString }
+
+        if let index = self.videoStreams.firstIndex(of: stream) {
+            let indexPath = IndexPath(row: index, section: 0)
+            self.collectionView.insertItems(at: [indexPath])
+            self.collectionView.reloadItems(at: [indexPath])
+        }
     }
 }
 
@@ -41,5 +54,28 @@ extension RTSPStreamViewController {
         // Configure the cell
 
         return cell
+    }
+}
+
+extension RTSPStreamViewController {
+    // MARK: - Segue
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "addStream":
+            addStream(for: segue)
+        default:
+            preconditionFailure("Segue identifier did not match")
+        }
+    }
+
+    private func addStream(for segue: UIStoryboardSegue) {
+        guard let navController = segue.destination as? UINavigationController else { return }
+        guard let topController = navController.topViewController else { return }
+        guard let viewController = topController as? AddStreamViewController else { return }
+
+        viewController.handler = { [unowned self] (url) in
+            self.add(stream: url)
+        }
     }
 }
