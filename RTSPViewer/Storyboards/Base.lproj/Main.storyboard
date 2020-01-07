@@ -39,7 +39,7 @@
                     <navigationItem key="navigationItem" id="054-xN-8vB">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="y5j-Eg-h2Q">
                             <connections>
-                                <segue destination="h0Y-7n-huh" kind="presentation" id="6js-du-o42"/>
+                                <segue destination="h0Y-7n-huh" kind="presentation" identifier="addStream" id="6js-du-o42"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
