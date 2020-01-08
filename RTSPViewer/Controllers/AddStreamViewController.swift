@@ -77,9 +77,16 @@ extension AddStreamViewController {
 
         if let url = textField.text {
             if let url = URL(string: url) {
-                handler?(url)
+                dismiss(animated: true) { [weak self] in
+                    guard let weakSelf = self else { return }
+                    weakSelf.handler?(url)
+                }
             }
         }
+    }
+
+    @IBAction func cancel(sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
 }
 
