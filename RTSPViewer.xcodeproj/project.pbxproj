@@ -16,6 +16,7 @@
 		3C7C154723C2A34C00F998E0 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C154623C2A34C00F998E0 /* Validatable.swift */; };
 		3C7C154A23C2A3D900F998E0 /* Evaluatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C154923C2A3D900F998E0 /* Evaluatable.swift */; };
 		3C7C154C23C2E35D00F998E0 /* String+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C154B23C2E35D00F998E0 /* String+EXT.swift */; };
+		3C7C154E23C5A38600F998E0 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C154D23C5A38600F998E0 /* VideoView.swift */; };
 		6BD5857F6652C392FBBB360B /* Pods_RTSPViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB07B83F8453FC533EAAB56 /* Pods_RTSPViewer.framework */; };
 		84252F7723B56C9A0016D338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84252F7623B56C9A0016D338 /* AppDelegate.swift */; };
 		84252F7923B56C9A0016D338 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84252F7823B56C9A0016D338 /* SceneDelegate.swift */; };
@@ -34,6 +35,7 @@
 		3C7C154623C2A34C00F998E0 /* Validatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
 		3C7C154923C2A3D900F998E0 /* Evaluatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evaluatable.swift; sourceTree = "<group>"; };
 		3C7C154B23C2E35D00F998E0 /* String+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+EXT.swift"; sourceTree = "<group>"; };
+		3C7C154D23C5A38600F998E0 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		84252F7323B56C990016D338 /* RTSPViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTSPViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84252F7623B56C9A0016D338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84252F7823B56C9A0016D338 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		3C7C154F23C5A39000F998E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3C7C154D23C5A38600F998E0 /* VideoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		84252F6A23B56C990016D338 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +145,7 @@
 				84252F7623B56C9A0016D338 /* AppDelegate.swift */,
 				84252F7823B56C9A0016D338 /* SceneDelegate.swift */,
 				3C7C154423C2A30B00F998E0 /* Validator.swift */,
+				3C7C154F23C5A39000F998E0 /* Views */,
 				3C7C154823C2A3A600F998E0 /* Protocols */,
 				3C7C154323C29F2700F998E0 /* Extensions */,
 				3C18FC9723C1D44A00E533F8 /* Cells */,
@@ -262,6 +273,7 @@
 				3C7C154523C2A30B00F998E0 /* Validator.swift in Sources */,
 				3C7C154723C2A34C00F998E0 /* Validatable.swift in Sources */,
 				3C18FC9623C1D44200E533F8 /* TextInputCell.swift in Sources */,
+				3C7C154E23C5A38600F998E0 /* VideoView.swift in Sources */,
 				84252F7923B56C9A0016D338 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
