@@ -51,4 +51,11 @@ class VideoView: UIView {
             textLabel.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor)
             ])
     }
+
+    func loadVideo(from url: URL) {
+        let media = VLCMedia(url: url)
+        mediaPlayer.media = media
+        isMuted = true
+        mediaPlayer.play()
+    }
 }
