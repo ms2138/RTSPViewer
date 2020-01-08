@@ -9,5 +9,25 @@
 import UIKit
 
 class VideoView: UIView {
+    let textLabel = UILabel(frame: .zero)
 
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        initialize()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+
+        initialize()
+    }
+
+    private func initialize() {
+        textLabel.text = "Loading video..."
+        textLabel.font = UIFont.systemFont(ofSize: 18.0)
+        textLabel.textColor = .white
+
+        addSubview(textLabel)
+    }
 }
