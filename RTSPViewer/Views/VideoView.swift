@@ -11,6 +11,16 @@ import UIKit
 class VideoView: UIView {
     let textLabel = UILabel(frame: .zero)
     let mediaPlayer = VLCMediaPlayer()
+    var isMuted: Bool = true {
+        willSet {
+            mediaPlayer.audio.volume = (newValue == true) ? 0 : 100
+        }
+    }
+    var aspectRatio: String = "16:9" {
+        willSet {
+            mediaPlayer.videoAspectRatio = UnsafeMutablePointer<Int8>(mutating: (newValue as NSString).utf8String)
+        }
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
