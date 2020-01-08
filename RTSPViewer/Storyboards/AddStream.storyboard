@@ -33,7 +33,13 @@
                             <outlet property="delegate" destination="PfJ-aJ-9yb" id="ODl-Df-0Y8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="rQY-Fc-vDm"/>
+                    <navigationItem key="navigationItem" id="rQY-Fc-vDm">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="AsT-lU-GrW">
+                            <connections>
+                                <action selector="cancelWithSender:" destination="PfJ-aJ-9yb" id="gFM-NT-Vpu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="urlCell" destination="od9-ih-Pm7" id="bfO-0o-lTo"/>
                     </connections>
