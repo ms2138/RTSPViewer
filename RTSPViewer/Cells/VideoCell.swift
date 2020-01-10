@@ -32,4 +32,12 @@ class VideoCell: UICollectionViewCell {
 
         contentView.addSubview(videoView)
     }
+
+    func playStream(at url: URL) {
+        videoView.loadVideo(from: url)
+    }
+
+    func stopStream() {
+        videoView.unloadVideo()
+    }
 }
