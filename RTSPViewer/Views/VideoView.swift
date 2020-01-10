@@ -58,4 +58,8 @@ class VideoView: UIView {
         isMuted = true
         mediaPlayer.play()
     }
+
+    func unloadVideo() {
+        mediaPlayer.stop()
+    }
 }
