@@ -19,19 +19,15 @@ class TextInputCell: UITableViewCell {
             textField.returnKeyType = returnKeyType
         }
     }
-    let textField: UITextField
+    let textField = UITextField()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        textField = UITextField()
-
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         initialize()
     }
 
     required init?(coder aDecoder: NSCoder) {
-        textField = UITextField()
-
         super.init(coder: aDecoder)
 
         initialize()
