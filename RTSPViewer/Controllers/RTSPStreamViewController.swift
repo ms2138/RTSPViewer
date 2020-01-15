@@ -55,6 +55,18 @@ extension RTSPStreamViewController {
     }
 }
 
+extension RTSPStreamViewController: UICollectionViewDelegateFlowLayout {
+    // MARK: - Collection view flow layout delegate
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cellDimensions = CGSize(width: view.frame.width / 2,
+                                    height: view.frame.width / 2)
+        return cellDimensions
+    }
+}
+
 extension RTSPStreamViewController {
     // MARK: - Segue
 
