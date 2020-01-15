@@ -9,28 +9,36 @@
 import UIKit
 
 class VideoCell: UICollectionViewCell {
-    var videoView: VideoView
+    var videoView = VideoView(frame: .zero)
 
     override init(frame: CGRect) {
-        videoView = VideoView(frame: frame)
-
         super.init(frame: frame)
 
         initialize()
     }
 
     required init?(coder: NSCoder) {
-        videoView = VideoView(frame: .zero)
-
         super.init(coder: coder)
 
         initialize()
     }
 
     private func initialize() {
+        videoView.translatesAutoresizingMaskIntoConstraints = false
         videoView.aspectRatio = "1:1"
 
         contentView.addSubview(videoView)
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        NSLayoutConstraint.activate([
+            videoView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            videoView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            videoView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            videoView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+            ])
     }
 
     func playStream(at url: URL) {
