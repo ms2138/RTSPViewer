@@ -73,6 +73,8 @@ extension AddStreamViewController {
         if textField.validate([validator.isURLValid]) == false {
             handleTextfieldValidation(in: textField,
                                       message: "Please enter a valid URL")
+        } else {
+            textField.resignFirstResponder()
         }
 
         if let url = textField.text {
@@ -95,7 +97,6 @@ extension AddStreamViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField.returnKeyType == .done {
-            textField.resignFirstResponder()
             done()
             return true
         }
