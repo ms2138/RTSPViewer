@@ -10,7 +10,7 @@ import Foundation
 
 class Validator {
     func isURLValid(text: String) -> Bool {
-        let regexp = "^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\\-]*[a-zA-Z0-9])\\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\\-]*[A-Za-z0-9])$"
+        let regexp = "(?i)(http?|https|rtsp)://(?:www\\.)?\\S+(?:/|\\b)"
         return text.evaluate(with: regexp)
     }
 }
