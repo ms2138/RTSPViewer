@@ -37,12 +37,20 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="054-xN-8vB">
+                        <barButtonItem key="leftBarButtonItem" title="Select" id="WBU-ZC-LVD">
+                            <connections>
+                                <action selector="toggleSelection" destination="wlk-Pw-AD9" id="hlr-wz-l22"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="y5j-Eg-h2Q">
                             <connections>
                                 <segue destination="h0Y-7n-huh" kind="presentation" identifier="addStream" id="6js-du-o42"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="selectionModeButtonItem" destination="WBU-ZC-LVD" id="UoX-jK-Hy8"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="csa-h6-T4u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,6 +76,10 @@
                         <color key="barTintColor" red="0.20690786289999999" green="0.20901836300000001" blue="0.21384492890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="un7-YY-Wou">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </toolbar>
                     <connections>
                         <segue destination="wlk-Pw-AD9" kind="relationship" relationship="rootViewController" id="w0v-7d-bDT"/>
                     </connections>

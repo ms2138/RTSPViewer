@@ -13,6 +13,16 @@ private let reuseIdentifier = "RTSPStreamCell"
 class RTSPStreamViewController: UICollectionViewController {
 
     private var videoStreams = [URL]()
+    private var deleteButtonItem: UIBarButtonItem!
+    @IBOutlet weak var selectionModeButtonItem: UIBarButtonItem!
+    var isSelecting: Bool = false {
+        didSet {
+            collectionView.allowsMultipleSelection = isSelecting
+            navigationController?.setToolbarHidden(!isSelecting, animated: true)
+
+            updateInterfaceForSelectionMode()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +31,20 @@ class RTSPStreamViewController: UICollectionViewController {
         collectionView.dragDelegate = self
         collectionView.dropDelegate = self
 
+        deleteButtonItem = UIBarButtonItem(barButtonSystemItem: .trash,
+                                           target: self,
+                                           action: #selector(deleteSelectedItems))
+        deleteButtonItem.isEnabled = false
+
+        setToolbarItems([deleteButtonItem], animated: true)
+
         title = "Live View"
     }
 }
 
 extension RTSPStreamViewController {
+    // MARK: - Adding and deleting streams
+
     func add(stream: URL) {
         videoStreams.append(stream)
 
@@ -37,10 +56,78 @@ extension RTSPStreamViewController {
             self.collectionView.reloadItems(at: [indexPath])
         }
     }
+
+    @objc func deleteSelectedItems() {
+        if let selectedPaths = collectionView.indexPathsForSelectedItems {
+            let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+
+            let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { [unowned self] _ in
+                self.deleteItems(at: selectedPaths)
+                self.updateInterfaceForSelectionMode()
+            }
+
+            alertController.addAction(cancelAction)
+            alertController.addAction(deleteAction)
+
+            present(alertController, animated: true)
+        }
+    }
+
+    func deleteItems(at indexPaths: [IndexPath]) {
+        var deleteVideoStreams = [URL]()
+        indexPaths.forEach { indexPath in
+            deleteVideoStreams.append(videoStreams[indexPath.row])
+        }
+
+        videoStreams.removeElements(in: deleteVideoStreams)
+
+        collectionView.performBatchUpdates({
+            self.collectionView.deleteItems(at: indexPaths)
+        }, completion: nil)
+
+        if videoStreams.count == 0 {
+            toggleSelection()
+        }
+    }
 }
 
 extension RTSPStreamViewController {
-    // MARK: UICollectionViewDataSource
+    // MARK: - Item Selection
+
+    @IBAction func toggleSelection() {
+        if isSelecting == true {
+            selectionModeButtonItem.title = "Select"
+            collectionView.deselectAllItems(animated: true)
+            isSelecting = false
+        } else {
+            selectionModeButtonItem.title = "Cancel"
+            isSelecting = true
+        }
+    }
+
+    func updateInterfaceForSelectionMode() {
+        guard let selectedPaths = collectionView.indexPathsForSelectedItems else {
+            return
+        }
+        
+        let enableButtonItem = (selectedPaths.count > 0)
+        deleteButtonItem.isEnabled = enableButtonItem
+
+        switch selectedPaths.count {
+        case let selectionCount where selectionCount == 1:
+            title = "\(selectedPaths.count) item selected"
+        case let selectionCount where selectionCount > 1:
+            title = "\(selectedPaths.count) items selected"
+        default:
+            title = isSelecting ? "Select Items" : "Live View"
+        }
+    }
+}
+
+extension RTSPStreamViewController {
+    // MARK: Collection view data source
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -58,6 +145,27 @@ extension RTSPStreamViewController {
         cell.playStream(at: videoStreamURL)
 
         return cell
+    }
+}
+
+extension RTSPStreamViewController {
+    // MARK: - Collection view delegate
+
+    override func collectionView(_ collectionView: UICollectionView,
+                                 shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard isSelecting else { return }
+
+        updateInterfaceForSelectionMode()
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        guard isSelecting else { return }
+
+        updateInterfaceForSelectionMode()
     }
 }
 
