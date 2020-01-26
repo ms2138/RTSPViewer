@@ -10,6 +10,12 @@ import UIKit
 
 class VideoCell: UICollectionViewCell {
     var videoView = VideoView(frame: .zero)
+    var checkMarkView = SSCheckMarkView(frame: .zero)
+    override var isSelected: Bool {
+        didSet {
+            checkMarkView.checked = isSelected
+        }
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,7 +33,12 @@ class VideoCell: UICollectionViewCell {
         videoView.translatesAutoresizingMaskIntoConstraints = false
         videoView.aspectRatio = "1:1"
 
+        checkMarkView.translatesAutoresizingMaskIntoConstraints = false
+        checkMarkView.checked = false
+        checkMarkView.backgroundColor = .clear
+
         contentView.addSubview(videoView)
+        contentView.addSubview(checkMarkView)
     }
 
     override func layoutSubviews() {
@@ -38,6 +49,13 @@ class VideoCell: UICollectionViewCell {
             videoView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             videoView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             videoView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+            ])
+
+        NSLayoutConstraint.activate([
+            checkMarkView.heightAnchor.constraint(equalToConstant: 35.0),
+            checkMarkView.widthAnchor.constraint(equalToConstant: 35.0),
+            checkMarkView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            checkMarkView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
             ])
     }
 
