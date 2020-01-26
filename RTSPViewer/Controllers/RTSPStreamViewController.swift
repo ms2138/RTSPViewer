@@ -20,6 +20,8 @@ class RTSPStreamViewController: UICollectionViewController {
         collectionView.dragInteractionEnabled = true
         collectionView.dragDelegate = self
         collectionView.dropDelegate = self
+
+        title = "Live View"
     }
 }
 
