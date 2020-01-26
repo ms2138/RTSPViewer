@@ -19,6 +19,7 @@
 		3C7C154E23C5A38600F998E0 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C154D23C5A38600F998E0 /* VideoView.swift */; };
 		3C7C155223C5AF2600F998E0 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C155123C5AF2600F998E0 /* VideoCell.swift */; };
 		3CFB58F323DD4DA200897303 /* Array+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB58F223DD4DA200897303 /* Array+EXT.swift */; };
+		3CFB58F523DD4E2000897303 /* UICollectionView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB58F423DD4E2000897303 /* UICollectionView+EXT.swift */; };
 		6BD5857F6652C392FBBB360B /* Pods_RTSPViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB07B83F8453FC533EAAB56 /* Pods_RTSPViewer.framework */; };
 		84252F7723B56C9A0016D338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84252F7623B56C9A0016D338 /* AppDelegate.swift */; };
 		84252F7923B56C9A0016D338 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84252F7823B56C9A0016D338 /* SceneDelegate.swift */; };
@@ -41,6 +42,7 @@
 		3C7C155023C5A48B00F998E0 /* RTSPViewer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RTSPViewer-Bridging-Header.h"; sourceTree = "<group>"; };
 		3C7C155123C5AF2600F998E0 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		3CFB58F223DD4DA200897303 /* Array+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+EXT.swift"; sourceTree = "<group>"; };
+		3CFB58F423DD4E2000897303 /* UICollectionView+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+EXT.swift"; sourceTree = "<group>"; };
 		84252F7323B56C990016D338 /* RTSPViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTSPViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84252F7623B56C9A0016D338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84252F7823B56C9A0016D338 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				3C7C154123C29EE900F998E0 /* UITextField+EXT.swift */,
 				3C7C154B23C2E35D00F998E0 /* String+EXT.swift */,
 				3CFB58F223DD4DA200897303 /* Array+EXT.swift */,
+				3CFB58F423DD4E2000897303 /* UICollectionView+EXT.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				3C7C155223C5AF2600F998E0 /* VideoCell.swift in Sources */,
 				3C7C154A23C2A3D900F998E0 /* Evaluatable.swift in Sources */,
 				3C7C154523C2A30B00F998E0 /* Validator.swift in Sources */,
+				3CFB58F523DD4E2000897303 /* UICollectionView+EXT.swift in Sources */,
 				3C7C154723C2A34C00F998E0 /* Validatable.swift in Sources */,
 				3C18FC9623C1D44200E533F8 /* TextInputCell.swift in Sources */,
 				3C7C154E23C5A38600F998E0 /* VideoView.swift in Sources */,
