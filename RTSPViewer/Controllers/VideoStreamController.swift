@@ -14,3 +14,23 @@ class VideoStreamController: UIViewController {
         super.viewDidLoad()
     }
 }
+
+extension VideoStreamController {
+    // MARK: Device Orientation
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscape
+    }
+
+    override var shouldAutorotate: Bool {
+        return true
+    }
+}
+
+extension VideoStreamController {
+// MARK: IBActions
+
+    @IBAction func close(sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+}
