@@ -29,6 +29,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <segue destination="AgR-Hu-ZTj" kind="show" identifier="showVideoStream" id="tGe-fv-j2w"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -56,13 +59,23 @@
             </objects>
             <point key="canvasLocation" x="1089.8550724637682" y="122.54464285714285"/>
         </scene>
+        <!--VideoStream-->
+        <scene sceneID="NVT-Ny-Kw8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="VideoStream" id="AgR-Hu-ZTj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Hgz-Ij-vT7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MZQ-kr-uo5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1882" y="190"/>
+        </scene>
         <!--AddStream-->
         <scene sceneID="Zil-PQ-zwd">
             <objects>
                 <viewControllerPlaceholder storyboardName="AddStream" id="h0Y-7n-huh" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nlX-YU-REz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1891" y="125"/>
+            <point key="canvasLocation" x="1874" y="52"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7nI-la-bwr">
