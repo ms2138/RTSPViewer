@@ -22,6 +22,7 @@
 		3CFB58F523DD4E2000897303 /* UICollectionView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB58F423DD4E2000897303 /* UICollectionView+EXT.swift */; };
 		3CFB58F723DE541700897303 /* SSCheckMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB58F623DE541700897303 /* SSCheckMarkView.swift */; };
 		3CFB58F923DE968A00897303 /* VideoStreamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB58F823DE968A00897303 /* VideoStreamController.swift */; };
+		3CFB58FB23DE96D000897303 /* VideoStream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFB58FA23DE96D000897303 /* VideoStream.storyboard */; };
 		6BD5857F6652C392FBBB360B /* Pods_RTSPViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB07B83F8453FC533EAAB56 /* Pods_RTSPViewer.framework */; };
 		84252F7723B56C9A0016D338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84252F7623B56C9A0016D338 /* AppDelegate.swift */; };
 		84252F7923B56C9A0016D338 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84252F7823B56C9A0016D338 /* SceneDelegate.swift */; };
@@ -47,6 +48,7 @@
 		3CFB58F423DD4E2000897303 /* UICollectionView+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+EXT.swift"; sourceTree = "<group>"; };
 		3CFB58F623DE541700897303 /* SSCheckMarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSCheckMarkView.swift; sourceTree = "<group>"; };
 		3CFB58F823DE968A00897303 /* VideoStreamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamController.swift; sourceTree = "<group>"; };
+		3CFB58FA23DE96D000897303 /* VideoStream.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoStream.storyboard; sourceTree = "<group>"; };
 		84252F7323B56C990016D338 /* RTSPViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTSPViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84252F7623B56C9A0016D338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84252F7823B56C9A0016D338 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				84252F7C23B56C9A0016D338 /* Main.storyboard */,
 				3C786C7E23BDA842009B7351 /* AddStream.storyboard */,
+				3CFB58FA23DE96D000897303 /* VideoStream.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				3C786C7F23BDA842009B7351 /* AddStream.storyboard in Resources */,
 				84252F8323B56C9E0016D338 /* LaunchScreen.storyboard in Resources */,
 				84252F8023B56C9E0016D338 /* Assets.xcassets in Resources */,
+				3CFB58FB23DE96D000897303 /* VideoStream.storyboard in Resources */,
 				84252F7E23B56C9A0016D338 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
