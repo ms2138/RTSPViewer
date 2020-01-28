@@ -9,9 +9,26 @@
 import UIKit
 
 class VideoStreamController: UIViewController {
+    @IBOutlet weak var videoView: VideoView!
+    var videoStreamURL: URL? {
+        willSet {
+            if let url = newValue {
+                if let videoView = videoView {
+                    videoView.loadVideo(from: url)
+                }
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        let value = UIInterfaceOrientation.landscapeLeft.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
     }
 }
 
