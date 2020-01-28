@@ -237,10 +237,19 @@ extension RTSPStreamViewController: UICollectionViewDropDelegate {
 extension RTSPStreamViewController {
     // MARK: - Segue
 
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+         if identifier == "showVideoStream" && isSelecting == true {
+            return false
+         }
+         return true
+     }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "addStream":
             addStream(for: segue)
+        case "showVideoStream":
+            showVideoStream(for: segue)
         default:
             preconditionFailure("Segue identifier did not match")
         }
@@ -253,6 +262,18 @@ extension RTSPStreamViewController {
 
         viewController.handler = { [unowned self] (url) in
             self.add(stream: url)
+        }
+    }
+
+    private func showVideoStream(for segue: UIStoryboardSegue) {
+        if let selectedIndexPaths = collectionView.indexPathsForSelectedItems,
+            let selectedItem = selectedIndexPaths.first {
+            collectionView.deselectItem(at: selectedItem, animated: false)
+            guard let navController = segue.destination as? UINavigationController else { return }
+            guard let videoStreamController = navController.topViewController as?
+                VideoStreamController else { return }
+            let authorizedStream = videoStreams[selectedItem.row]
+            videoStreamController.videoStreamURL = authorizedStream
         }
     }
 }
