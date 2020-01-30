@@ -14,7 +14,19 @@
                     <view key="view" contentMode="scaleToFill" id="vMz-ul-tkB">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XZv-1j-NJ0" customClass="VideoView" customModule="RTSPViewer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XZv-1j-NJ0" firstAttribute="leading" secondItem="vMz-ul-tkB" secondAttribute="leading" id="If9-Xe-AzR"/>
+                            <constraint firstItem="XZv-1j-NJ0" firstAttribute="top" secondItem="vMz-ul-tkB" secondAttribute="top" id="Ig2-8m-yIh"/>
+                            <constraint firstAttribute="trailing" secondItem="XZv-1j-NJ0" secondAttribute="trailing" id="pGn-mD-YRu"/>
+                            <constraint firstAttribute="bottom" secondItem="XZv-1j-NJ0" secondAttribute="bottom" id="wb2-xy-JQ2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="m7j-RU-Mjc"/>
                     </view>
                     <navigationItem key="navigationItem" id="VYX-KK-uiw">
@@ -24,6 +36,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="videoView" destination="XZv-1j-NJ0" id="ya9-EP-Fij"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GKV-WH-ggi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -32,7 +47,7 @@
         <!--Navigation Controller-->
         <scene sceneID="nn4-LE-Hxf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uha-tC-4Db" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Uha-tC-4Db" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="xb1-oo-nyf">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
