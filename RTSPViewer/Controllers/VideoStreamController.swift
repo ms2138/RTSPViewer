@@ -22,6 +22,12 @@ class VideoStreamController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        guard let url = videoStreamURL else { return }
+
+        navigationController?.setNavigationBarHidden(true, animated: false)
+
+        videoView.loadVideo(from: url)
     }
 
     override func viewWillAppear(_ animated: Bool) {
