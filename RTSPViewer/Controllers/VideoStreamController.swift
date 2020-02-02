@@ -25,6 +25,12 @@ class VideoStreamController: UIViewController {
 
         guard let url = videoStreamURL else { return }
 
+        videoView.textLabel.font = UIFont.systemFont(ofSize: 40.0)
+
+        if let host = url.host {
+            title = host
+        }
+
         navigationController?.setNavigationBarHidden(true, animated: false)
 
         videoView.loadVideo(from: url)
@@ -55,5 +61,11 @@ extension VideoStreamController {
 
     @IBAction func close(sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction func handleTap(gesture: UITapGestureRecognizer) {
+        if let hidden = navigationController?.isNavigationBarHidden {
+            navigationController?.setNavigationBarHidden(!hidden, animated: true)
+        }
     }
 }
