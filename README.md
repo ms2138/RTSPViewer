@@ -8,3 +8,6 @@ To run the project:
 * pod install
 * Open RTSPViewer.xcworkspace
 * Build and run in Xcode
+
+# License
+This project is licensed under the MIT License.
