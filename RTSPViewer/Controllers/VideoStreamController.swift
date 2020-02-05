@@ -27,9 +27,7 @@ class VideoStreamController: UIViewController {
 
         videoView.textLabel.font = UIFont.systemFont(ofSize: 40.0)
 
-        if let host = url.host {
-            title = host
-        }
+        title = url.host
 
         navigationController?.setNavigationBarHidden(true, animated: false)
 
